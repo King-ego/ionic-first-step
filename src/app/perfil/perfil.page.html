@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>First</ion-title>
+    <!-- <ion-nav-link routerLink="/">voltar</ion-nav-link> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list style="justify-content: center">
+    <ion-item *ngFor="let item of data; let index">
+      <ion-card class="ion-padding">
+        <ion-label>{{ item?.id }}</ion-label>
+        <ion-label>{{ item?.title }}</ion-label>
+        <ion-label>{{ item?.url }}</ion-label>
+        <ion-label>{{ item?.block }}</ion-label>
+        <ion-label>{{ item?.create_at }}</ion-label>
+        <ion-label>{{ item?.update_at }}</ion-label>
+        <p class="paddingTB-8">
+          <ion-text class="ion-margin-vertical">Salas</ion-text>
+        </p>
+        <ion-label>{{ item?.room?.id }}</ion-label>
+        <ion-label>{{ item?.room?.name }}</ion-label>
+        <ion-label>{{ item?.room?.description }}</ion-label>
+        <ion-label>{{ item?.room?.create_at }}</ion-label>
+        <ion-label>{{ item?.room?.update_at }}</ion-label>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
